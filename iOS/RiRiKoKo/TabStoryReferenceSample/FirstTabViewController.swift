@@ -82,10 +82,7 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
     
     func refresh(sender:AnyObject)
     {
-        titleArray = []
-        priceArray = []
-        itemIdArray = []
-        imageArray = []
+
         getDataFromDB()
         self.refreshControl.endRefreshing()
     }
@@ -217,6 +214,11 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
                    
                     let itemDictionary = parsedResult![Constants.MerchandisesResponseKeys.Merchandises] as? [[String:AnyObject]]
                    //print(itemDictionary)
+                    
+                    titleArray = []
+                    priceArray = []
+                    itemIdArray = []
+                    imageArray = []
                     
                     //grab every "title" in dictionaries by look into the array with for loop
                     for i in 0...itemDictionary!.count-1 {
