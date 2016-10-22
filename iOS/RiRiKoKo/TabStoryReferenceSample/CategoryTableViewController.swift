@@ -49,7 +49,7 @@ class CategoryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.itemCategoryNumber = indexPath.row
         
         navigationController?.popViewControllerAnimated(true)

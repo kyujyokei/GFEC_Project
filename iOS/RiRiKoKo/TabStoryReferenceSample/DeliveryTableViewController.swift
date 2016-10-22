@@ -49,7 +49,7 @@ class DeliveryTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.itemDeliveryNumber = indexPath.row
         
         navigationController?.popViewControllerAnimated(true)

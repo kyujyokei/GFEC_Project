@@ -106,9 +106,9 @@ class FourthTabViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.imageView!.layer.cornerRadius = 30 //cell.imageView!.layer.frame.height/2
         cell.imageView!.clipsToBounds = true //round contact images
         
-        var itemSize:CGSize = CGSizeMake(60, 60)
+        let itemSize:CGSize = CGSizeMake(60, 60)
         UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.mainScreen().scale)
-        var imageRect : CGRect = CGRectMake(0, 0, itemSize.width, itemSize.height)
+        let imageRect : CGRect = CGRectMake(0, 0, itemSize.width, itemSize.height)
         cell.imageView!.image?.drawInRect(imageRect)
         cell.imageView!.image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

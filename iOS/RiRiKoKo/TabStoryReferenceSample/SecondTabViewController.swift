@@ -57,9 +57,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
     
     override func viewWillAppear(animated: Bool) {
-//        for i in 0...coordinateArray.count-1 {
-//            
-//        }
+
         getDataFromDB()
     }
     
@@ -163,7 +161,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
     
 
-    func mapView(mapView: MKMapView!, didAddAnnotationViews views: [MKAnnotationView]!) {
+    func mapView(mapView: MKMapView, didAddAnnotationViews views: [MKAnnotationView]) {
         
         for view in views {
             if view.annotation!.isKindOfClass(MKUserLocation) {

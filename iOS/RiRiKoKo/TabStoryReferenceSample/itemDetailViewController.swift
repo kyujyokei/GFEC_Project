@@ -540,7 +540,7 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
                         let alert = UIAlertView()
                         alert.title = "Item Deleted!"
                         alert.message = ""
-                        var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         loadingIndicator.center = self.view.center;
                         loadingIndicator.hidesWhenStopped = true
                         loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray

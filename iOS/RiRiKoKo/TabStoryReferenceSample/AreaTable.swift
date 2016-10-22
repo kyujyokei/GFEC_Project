@@ -41,13 +41,9 @@ class AreaTable: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
-        var theDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-//        theDelegate.postalTemp = indexPath.row + 1
-        //print(theDelegate.cityTemp)
         
-        var storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
+        let storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
+       // var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
         
         //        controller.chooseCityButton.setTitle("Hi" , forState: .Normal)
         selectedAreaNumber = indexPath.row

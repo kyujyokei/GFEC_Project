@@ -30,6 +30,13 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
     
     @IBOutlet weak var categoryScroll: UIScrollView!
     
+    @IBAction func womenClothingButton(sender: UIButton) {
+        
+        getDataByCategory(1)
+        self.refreshControl.endRefreshing()
+    }
+    
+    
     var hasGotAPIYet: Bool = false
     
     override func viewWillAppear(animated: Bool) {
@@ -143,7 +150,7 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
         cell.cellLabel.text = "\(titleArray[indexPath.row])" //顯示物件名稱
         cell.cellPriceLabel.text = "$ \(priceArray[indexPath.row])"//顯示價格
         
-        var itemId = itemIdArray[indexPath.row] //給予每個cell item id，為了讓itemDetailView可以正確顯示
+        //var itemId = itemIdArray[indexPath.row] //給予每個cell item id，為了讓itemDetailView可以正確顯示
         
         return cell
     }
@@ -234,6 +241,86 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
                         itemIdArray.append(itemId!)
                         imageArray.append(itemImage!)
                     
+                    }
+                    //print(priceArray)
+                    //print(titleArray)
+                    //print(itemIdArray)
+                    
+                    //print("3.\(titleArray.count)")
+                    
+                    performUIUpdatesOnMain(){
+                        self.collectionView.reloadData()
+                        self.activityIndicator.stopAnimating()
+                    }
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    
+    private func getDataByCategory(categoryId:Int) {
+        
+        
+        let methodParameters: [String: String!] = [
+            Constants.Categories.Id : String(categoryId),
+            Constants.ParameterKeys.API_Key: Constants.ParameterValues.API_Key
+            ]
+        
+        //print(methodParameters)
+        
+        let urlString = Constants.Categories.APIBaseURL + escapedParameters(methodParameters)
+        
+        print("URL:\(urlString)")
+        
+        let url = NSURL(string: urlString)!
+        let request = NSURLRequest(URL: url)
+        var itemArray:NSArray?
+        
+        
+        // if an error occur, print it
+        func displayError(error: String) {
+            print(error)
+            print("URL at time of error: \(url)")
+            
+        }
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) in
+            
+            if error == nil {
+                if let data = data {
+                    let parsedResult: AnyObject!
+                    do {
+                        parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) //change 16 bit JSON code to redable format
+                    } catch {
+                        displayError("Could not parse the data as JSON: '\(data)'")
+                        return
+                    }
+                    
+                    
+                    
+                    let itemDictionary = parsedResult!["categories"] as? [[String:AnyObject]]
+                    print(itemDictionary!.count)
+                    
+                    titleArray = []
+                    priceArray = []
+                    itemIdArray = []
+                    imageArray = []
+                    
+                    //grab every "title" in dictionaries by look into the array with for loop
+                    for i in 0...itemDictionary!.count-1 {
+                        let itemTitle = itemDictionary![i][Constants.MerchandisesResponseKeys.MerchandiseTitle] as? String
+                        //print (itemTitle!)
+                        let itemPrice = itemDictionary![i][Constants.MerchandisesResponseKeys.MerchandisePrice] as? Int
+                        let itemId = itemDictionary![i][Constants.MerchandisesResponseKeys.MerchandiseId] as? Int
+                        let itemImage = itemDictionary![i][Constants.MerchandisesResponseKeys.image_1_s] as? String
+                        
+                        
+                        priceArray.append(itemPrice!)
+                        titleArray.append(itemTitle!)
+                        itemIdArray.append(itemId!)
+                        imageArray.append(itemImage!)
+                        
                     }
                     //print(priceArray)
                     //print(titleArray)

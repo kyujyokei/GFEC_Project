@@ -69,7 +69,7 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
             
             uploadAlert.title = "Uploading"
             uploadAlert.message = "Please wait"
-            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+            let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
             loadingIndicator.center = self.view.center;
             loadingIndicator.hidesWhenStopped = true
             loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
@@ -181,9 +181,9 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
                 let cornerRadius : CGFloat = 9.0
                 cell.backgroundColor = UIColor.clearColor()
-                var layer: CAShapeLayer = CAShapeLayer()
-                var pathRef:CGMutablePathRef = CGPathCreateMutable()
-                var bounds: CGRect = CGRectInset(cell.bounds, 10, 0)
+                let layer: CAShapeLayer = CAShapeLayer()
+                let pathRef:CGMutablePathRef = CGPathCreateMutable()
+                let bounds: CGRect = CGRectInset(cell.bounds, 10, 0)
                 var addLine: Bool = false
                 
                 if (indexPath.row == 0 && indexPath.row == tableView.numberOfRowsInSection(indexPath.section)-1) {
@@ -208,13 +208,13 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
                 layer.fillColor = UIColor(red: 255/255.0, green: 255/255.0, blue: 255/255.0, alpha: 0.8).CGColor
                 
                 if (addLine == true) {
-                    var lineLayer: CALayer = CALayer()
-                    var lineHeight: CGFloat = (1.0 / UIScreen.mainScreen().scale)
+                    let lineLayer: CALayer = CALayer()
+                    let lineHeight: CGFloat = (1.0 / UIScreen.mainScreen().scale)
                     lineLayer.frame = CGRectMake(CGRectGetMinX(bounds)+10, bounds.size.height-lineHeight, bounds.size.width-10, lineHeight)
                     lineLayer.backgroundColor = tableView.separatorColor!.CGColor
                     layer.addSublayer(lineLayer)
                 }
-                var testView: UIView = UIView(frame: bounds)
+                let testView: UIView = UIView(frame: bounds)
                 testView.layer.insertSublayer(layer, atIndex: 0)
                 testView.backgroundColor = UIColor.clearColor()
                 cell.backgroundView = testView
@@ -509,7 +509,7 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
                             let alert = UIAlertView()
                             alert.title = "Oops!!"
                             alert.message = "error occured"
-                            var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                            //var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                             
                             
                             alert.show()
@@ -550,7 +550,7 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
                         let alert = UIAlertView()
                         alert.title = "Upload Success!"
                         alert.message = ""
-                        var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         loadingIndicator.center = self.view.center;
                         loadingIndicator.hidesWhenStopped = true
                         loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
@@ -705,7 +705,7 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
                         let alert = UIAlertView()
                         alert.title = "Upload Sucess!"
                         alert.message = ""
-                        var loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         loadingIndicator.center = self.view.center;
                         loadingIndicator.hidesWhenStopped = true
                         loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray

@@ -48,7 +48,7 @@ class ItemStatusTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.itemStatusNumber = indexPath.row
         
         navigationController?.popViewControllerAnimated(true)

@@ -58,7 +58,7 @@ class RegisterViewController: UIViewController,UIImagePickerControllerDelegate, 
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        uploadimage = info[UIImagePickerControllerOriginalImage]! as! UIImage; dismissViewControllerAnimated(true, completion: nil)
+        uploadimage = info[UIImagePickerControllerOriginalImage] as? UIImage; dismissViewControllerAnimated(true, completion: nil)
         dispatch_async(dispatch_get_main_queue()) {
             self.addPhotoButton!.setTitle("", forState: .Normal)
             self.addPhotoButton!.setImage(self.uploadimage, forState: .Normal)

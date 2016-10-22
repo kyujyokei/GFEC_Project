@@ -190,7 +190,7 @@ class UserDetailViewController: UIViewController, UICollectionViewDataSource, UI
                     
                         let userName = userDictionary![Constants.UsersResponseKeys.UserName] as! String!
                         let userImage = userDictionary![Constants.UsersResponseKeys.Avatar_S] as! String!
-                        let ImgUrl = NSURL(fileURLWithPath: userImage)
+                        //let ImgUrl = NSURL(fileURLWithPath: userImage)
                 
                     print(userImage)
                     performUIUpdatesOnMain(){

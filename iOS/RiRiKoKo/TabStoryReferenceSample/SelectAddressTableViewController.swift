@@ -55,7 +55,7 @@ class SelectAddressTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.itemLocationId = addressArray[indexPath.row].id
         appDelegate.itemLocationTemp = self.addressArray[indexPath.row].postCode + Constants.CityArrays.CityNameArray[self.addressArray[indexPath.row].city_id] + self.addressArray[indexPath.row].name + "區" + self.addressArray[indexPath.row].address
         navigationController?.popViewControllerAnimated(true)

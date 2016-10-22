@@ -137,7 +137,7 @@ class LoggingInViewController: UIViewController {
                     
                     let userDictionary = parsedResult! as? [String:AnyObject]
                     
-                    let statusReply = parsedResult![Constants.UsersResponseKeys.Status] as? String
+                    //let statusReply = parsedResult![Constants.UsersResponseKeys.Status] as? String
                     
                     
                     //print("DIC:\(userDictionary)")
@@ -146,12 +146,12 @@ class LoggingInViewController: UIViewController {
                      {"status":"OK","message":"You're successfully signed in.","id":1,"email":"chinbo@gmail.com","authentication_token":"RxxXWabraXoVTA5Cz5rQ"}
                      */
                     
-                    let userDoc = userDictionary! as? [String:AnyObject]
+                    let userDoc = userDictionary! as [String:AnyObject]
                     print("USER DOC:\(userDoc)")
                     
-                    let userID = userDoc![Constants.UsersResponseKeys.UserId] as! Int
-                    let userName = userDoc![Constants.UsersResponseKeys.UserName] as! String
-                    let userImage = userDoc![Constants.UsersResponseKeys.Avatar] as? String
+                    let userID = userDoc[Constants.UsersResponseKeys.UserId] as! Int
+                    let userName = userDoc[Constants.UsersResponseKeys.UserName] as! String
+                    let userImage = userDoc[Constants.UsersResponseKeys.Avatar] as? String
                     
                     print("ID:\(parsedResult!)")
                     
@@ -160,7 +160,7 @@ class LoggingInViewController: UIViewController {
                     //if statusReply! == "OK" {
                         performUIUpdatesOnMain(){
                             
-                            var userDefault = NSUserDefaults.standardUserDefaults()
+                            let userDefault = NSUserDefaults.standardUserDefaults()
                             
                             userDefault.setBool(true, forKey: "hasLoggedIn")
                             userDefault.setObject(self.useremail, forKey: "userEmail")

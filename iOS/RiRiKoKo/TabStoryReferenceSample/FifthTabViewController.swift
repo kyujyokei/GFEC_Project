@@ -314,7 +314,7 @@ class FifthTabViewController: UIViewController , MKMapViewDelegate, CLLocationMa
                     if statusReply! == "OK" {
                         performUIUpdatesOnMain(){
                             
-                            var userDefault = NSUserDefaults.standardUserDefaults()
+                            let userDefault = NSUserDefaults.standardUserDefaults()
                             
                             userDefault.setBool(false, forKey: "hasLoggedIn")
                             self.navigationController?.popViewControllerAnimated(true)

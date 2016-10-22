@@ -32,13 +32,13 @@ class CityTable: UITableViewController {
 
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var theDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let theDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         theDelegate.cityTemp = indexPath.row
         //print(theDelegate.cityTemp)
         
-        var storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
-        var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
+        let storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
+        //var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
 
 //        controller.chooseCityButton.setTitle("Hi" , forState: .Normal)
         selectedNumber = theDelegate.cityTemp

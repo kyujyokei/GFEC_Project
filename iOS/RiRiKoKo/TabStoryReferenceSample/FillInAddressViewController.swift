@@ -53,7 +53,7 @@ class FillInAddressViewController: UIViewController, UIPopoverPresentationContro
         navController.navigationBarHidden = true
         let popMenu = navController.popoverPresentationController
         popMenu?.delegate = self
-        let viewForSource = sender as! UIView
+        let viewForSource = sender as UIView
         popMenu?.sourceView = viewForSource
         popMenu?.sourceRect = viewForSource.bounds
         
@@ -73,7 +73,7 @@ class FillInAddressViewController: UIViewController, UIPopoverPresentationContro
         
         let popMenu = navController.popoverPresentationController
         popMenu?.delegate = self
-        let viewForSource = sender as! UIView
+        let viewForSource = sender as UIView
         popMenu?.sourceView = viewForSource
         popMenu?.sourceRect = viewForSource.bounds
         
@@ -116,8 +116,8 @@ class FillInAddressViewController: UIViewController, UIPopoverPresentationContro
         if addressTextField.text != "" {
             
             
-            var address = Constants.CityArrays.CityNameArray[selectedNumber] + PostalDictionay.PostalArrayOfTuples[selectedNumber][selectedAreaNumber].1 + "\(addressTextField.text)"
-            var geocoder = CLGeocoder()
+            let address = Constants.CityArrays.CityNameArray[selectedNumber] + PostalDictionay.PostalArrayOfTuples[selectedNumber][selectedAreaNumber].1 + "\(addressTextField.text)"
+            let geocoder = CLGeocoder()
             
             geocoder.geocodeAddressString(address, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
                 
@@ -280,9 +280,9 @@ class FillInAddressViewController: UIViewController, UIPopoverPresentationContro
         
         //print("64STRING:\(base64String1)")
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        //var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        var userDefault = NSUserDefaults.standardUserDefaults()
+        let userDefault = NSUserDefaults.standardUserDefaults()
         
         let postCode:Int = PostalDictionay.PostalArrayOfTuples[selectedNumber][selectedAreaNumber].0
         let alias:String  = PostalDictionay.PostalArrayOfTuples[selectedNumber][selectedAreaNumber].1
