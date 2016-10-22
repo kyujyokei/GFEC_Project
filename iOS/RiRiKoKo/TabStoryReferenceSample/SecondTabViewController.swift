@@ -62,26 +62,29 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
     
     
+    // this creates the little bubble when tapped on a pin
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationIdentifier = "annotation"
         var view = mapView.dequeueReusableAnnotationViewWithIdentifier(annotationIdentifier)
         if view == nil {
             view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            view?.canShowCallout = true
-            view?.rightCalloutAccessoryView = UIButton(type: .ContactAdd)
+            view!.canShowCallout = true
+            view!.annotation = annotation
+            
+            let button = UIButton(frame: CGRect(x: 100, y: 100, width: 60, height: 50))
+            button.backgroundColor = UIColorUtil.rgb(0x654982)
+            button.setTitle("View", forState: .Normal)
+            view?.rightCalloutAccessoryView = button
+            
+            view!.canShowCallout = true
+            view!.image = UIImage(named:"share.png")
+        
+            
+
         } else {
             view?.annotation = annotation
         }
 
-//        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(annotationIdentifier) as? MKPinAnnotationView
-//        //let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-//        let anAnnotation = annotation as! UserAnnotation
-//        pinView!.pinColor = anAnnotation.pinTintColor
-//        view = pinView
-        /*
-         let colorPointAnnotation = annotation as! ColorPointAnnotation
-         pinView?.pinTintColor = colorPointAnnotation.pinColor
-         */
         
         return view
     }
@@ -89,11 +92,12 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     var selectedAnnotation: UserAnnotation!
     var selectedUserId:Int!
     
+
+    
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if control == view.rightCalloutAccessoryView {
             selectedAnnotation = view.annotation as? UserAnnotation
-            //view.annotation.
-            //var Id = UserAnnotation.getUserId()
+
             selectedUserId = selectedAnnotation.userid
             performSegueWithIdentifier("showUser", sender: self)
         }
@@ -228,7 +232,7 @@ class SecondViewController: UIViewController, MKMapViewDelegate, CLLocationManag
                         let destination:CLLocationCoordinate2D = CLLocationCoordinate2DMake(dobLat, dobLong)
                         
                         let purple:UIColor = UIColor.purpleColor()
-                        let annotation = UserAnnotation(title: locName, locationName: locName, discipline: locName, coordinate: destination, userid: locUserId, pinTIntColor: purple )
+                        let annotation = UserAnnotation(title: locName, locationName: locName, discipline: locName, coordinate: destination, userid: locUserId, pinTIntColor: UIColor.purpleColor())
                         
                         self.map.addAnnotation(annotation)
                     }
