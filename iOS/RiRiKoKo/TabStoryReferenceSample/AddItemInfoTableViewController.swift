@@ -280,7 +280,7 @@ class AddItemInfoTableViewController: UITableViewController , UIImagePickerContr
         getLocationFromDB()
         tableView.backgroundColor = UIColorUtil.rgb(0xececec)
         postButton.backgroundColor = UIColor.clearColor()
-        postButton.layer.cornerRadius = 20
+        postButton.layer.cornerRadius = 9
         postButton.backgroundColor = UIColorUtil.rgb(0x654982)
         shareSwitch.on = false
         

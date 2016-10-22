@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="znx-RW-K34">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="znx-RW-K34">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -229,30 +229,36 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tbj-bs-f5I">
-                                        <rect key="frame" x="0.0" y="564" width="600" height="45"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="56" id="Tbj-bs-f5I">
+                                        <rect key="frame" x="0.0" y="564" width="600" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tbj-bs-f5I" id="0lE-bX-JQq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amx-4i-E0p">
-                                                    <rect key="frame" x="265" y="2.5" width="70" height="40"/>
+                                                    <rect key="frame" x="10" y="0.0" width="580" height="56"/>
                                                     <color key="backgroundColor" red="0.57254901960000004" green="0.2274509804" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="PHP-f0-pj4"/>
-                                                        <constraint firstAttribute="width" constant="70" id="oNH-Sj-Mvg"/>
+                                                        <constraint firstAttribute="height" constant="56" id="PHP-f0-pj4"/>
+                                                        <constraint firstAttribute="width" constant="600" id="oNH-Sj-Mvg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <state key="normal" title="POST">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="oNH-Sj-Mvg"/>
+                                                        </mask>
+                                                    </variation>
                                                     <connections>
                                                         <action selector="postButtonAction:" destination="znx-RW-K34" eventType="touchUpInside" id="jwT-9e-h6Q"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="amx-4i-E0p" firstAttribute="width" secondItem="0lE-bX-JQq" secondAttribute="width" constant="-20" id="YaL-9q-X5N"/>
                                                 <constraint firstItem="amx-4i-E0p" firstAttribute="centerX" secondItem="0lE-bX-JQq" secondAttribute="centerX" id="aaC-3B-Dhv"/>
                                                 <constraint firstItem="amx-4i-E0p" firstAttribute="centerY" secondItem="0lE-bX-JQq" secondAttribute="centerY" id="lrk-2f-W4o"/>
                                             </constraints>
@@ -263,7 +269,7 @@
                             <tableViewSection headerTitle="Share" id="qko-T5-EMV">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3QQ-1a-C3k">
-                                        <rect key="frame" x="0.0" y="637" width="600" height="45"/>
+                                        <rect key="frame" x="0.0" y="648" width="600" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3QQ-1a-C3k" id="rj2-Hi-wVf">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>

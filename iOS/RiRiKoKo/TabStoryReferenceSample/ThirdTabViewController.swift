@@ -29,13 +29,13 @@ class ThirdTabViewController: UIViewController , UIImagePickerControllerDelegate
         // End of adding logo to Navigation Bar
         
         PhotoLibrary.backgroundColor = UIColor.clearColor()
-        PhotoLibrary.layer.cornerRadius = 26
-        PhotoLibrary.layer.borderWidth = 3
+        PhotoLibrary.layer.cornerRadius = 60
+        PhotoLibrary.layer.borderWidth = 1
         PhotoLibrary.layer.borderColor = UIColor.whiteColor().CGColor
         
         Camera.backgroundColor = UIColor.clearColor()
-        Camera.layer.cornerRadius = 26
-        Camera.layer.borderWidth = 3
+        Camera.layer.cornerRadius = 60
+        Camera.layer.borderWidth = 1
         Camera.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
