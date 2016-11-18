@@ -40,6 +40,7 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
     var like_on: UIImage = UIImage(named:"like_on.png")!
     var like_off: UIImage = UIImage(named:"like_off.png")!
     
+  
     @IBOutlet weak var editItemButton: UIButton!
     @IBOutlet weak var deleteItemButton: UIButton!
     
@@ -73,6 +74,11 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
             likeButton.setImage(like_off, forState: .Normal)
             likeButtonPushed = false
         }
+    }
+    
+    @IBAction func buyButtonAction(sender: UIButton) {
+        self.performSegueWithIdentifier("checkOut", sender:  buyButton)
+        
     }
     
     @IBAction func seeUserButtonAction(sender: AnyObject) {

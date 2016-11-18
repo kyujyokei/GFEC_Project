@@ -6,10 +6,26 @@
 //  Copyright © 2016年 ColorKit. All rights reserved.
 //
 
+/*
+ NOTE: The RiRiKoKo database wasn't completed to provide APIs for checking out.
+ What is here is prototype UI of how the checkout process will go.
+ 
+ 
+ */
+
 import UIKit
 
 class CheckingoutViewController: UITableViewController {
 
+    @IBOutlet weak var buyButton: UIButton!
+    
+    
+    @IBAction func buyButtonAction(sender: UIButton) {
+        
+        self.navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,15 +43,15 @@ class CheckingoutViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
