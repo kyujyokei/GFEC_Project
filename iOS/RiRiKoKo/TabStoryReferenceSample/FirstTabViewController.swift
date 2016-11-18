@@ -80,7 +80,7 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: "refresh:",   forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(FirstTabViewController.refresh(_:)),   forControlEvents: UIControlEvents.ValueChanged)
         collectionView!.addSubview(refreshControl)
         
         categoryScroll.backgroundColor = UIColorUtil.rgb(0xffffff);

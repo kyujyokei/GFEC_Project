@@ -32,7 +32,7 @@
             startingLineNumber = "450"
             endingLineNumber = "450"
             landmarkName = "post()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,7 @@
             startingLineNumber = "467"
             endingLineNumber = "467"
             landmarkName = "post()"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -63,8 +63,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "79"
             endingLineNumber = "79"
-            landmarkName = "seeUserButtonAction(_:)"
-            landmarkType = "5">
+            landmarkName = "seeUserButtonAction(sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -111,8 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "postButtonAction(_:)"
-            landmarkType = "5">
+            landmarkName = "postButtonAction(sender:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

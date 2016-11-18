@@ -37,7 +37,7 @@ class S01_AddressTableViewController: UITableViewController {
         // End of adding logo to Navigation Bar
         
         //let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "buttonMethod")
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addButtonMethod")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(S01_AddressTableViewController.addButtonMethod))
         navigationItem.rightBarButtonItem = addButton
         
     }
