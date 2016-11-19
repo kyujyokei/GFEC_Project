@@ -161,7 +161,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="buyButtonAction:" destination="A5v-Gz-f1h" eventType="touchUpInside" id="Uuh-bw-pkW"/>
-                                                        <segue destination="rmP-1o-Jac" kind="show" id="UZx-Jp-Jcq"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -186,6 +185,7 @@
                         <outlet property="itemImage" destination="cwg-H5-vm8" id="ylW-uh-euT"/>
                         <outlet property="itemPrice" destination="P64-bZ-oxo" id="6iE-oU-GWj"/>
                         <outlet property="itemTitle" destination="jZH-7R-lEn" id="BtN-0q-NPt"/>
+                        <segue destination="rmP-1o-Jac" kind="show" identifier="show" id="Bx2-Km-fO2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67c-iX-D7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -249,7 +249,7 @@
                                         <rect key="frame" x="0.0" y="278" width="600" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RYh-Si-TZo" id="x9c-Ed-4VO">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="77i-1m-dcT">

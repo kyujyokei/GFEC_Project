@@ -20,6 +20,8 @@ class CheckingoutViewController: UITableViewController {
     var itemImageTemp:UIImage!
     var itemTitleTemp:String!
     var itemPriceTemp:Int!
+    
+    let uploadAlert = UIAlertView()
 
     @IBOutlet weak var buyButton: UIButton!
     
@@ -32,7 +34,25 @@ class CheckingoutViewController: UITableViewController {
     
     @IBAction func buyButtonAction(sender: UIButton) {
         
-        //self.navigationController?.popToRootViewControllerAnimated(true)
+        uploadAlert.title = "Processing..."
+        uploadAlert.message = "Please wait"
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+        loadingIndicator.center = self.view.center;
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        loadingIndicator.startAnimating();
+        uploadAlert.setValue(loadingIndicator, forKey: "accessoryView")
+        loadingIndicator.startAnimating()
+        uploadAlert.show()
+        
+        /*TODO: This part is for demonstration only and should be fixed when checkout API is released*/
+        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 4 * Int64(NSEC_PER_SEC))
+        dispatch_after(time, dispatch_get_main_queue()) {
+            self.uploadAlert.dismissWithClickedButtonIndex(-1, animated: true)
+            self.performSegueWithIdentifier("show", sender: nil)
+        }
+        
+        
     }
     
     
