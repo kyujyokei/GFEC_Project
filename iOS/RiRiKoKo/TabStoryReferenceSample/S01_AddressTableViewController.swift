@@ -142,8 +142,13 @@ class S01_AddressTableViewController: UITableViewController {
                             
                             let tempLocation = AddressForm()
                             
+
+                            
                             tempLocation.id = locationDictionary[i][Constants.LocationRespondKeys.Id] as! Int
                             let cityArray = locationDictionary[i][Constants.LocationRespondKeys.City] as! [String:AnyObject]
+                            
+                                                        print(cityArray)
+                            
                             tempLocation.city_id = cityArray[Constants.LocationRespondKeys.ParentId] as! Int
                             tempLocation.name = locationDictionary[i][Constants.LocationRespondKeys.Alias] as! String
                             tempLocation.address = locationDictionary[i][Constants.LocationRespondKeys.Address] as! String

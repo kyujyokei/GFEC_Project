@@ -111,6 +111,7 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
             let Destination : CheckingoutViewController = segue.destinationViewController as! CheckingoutViewController
             Destination.itemImageTemp = itemImage.image
             Destination.itemTitleTemp = itemTitle
+            Destination.itemPriceTemp = itemValue
         }
     }
     

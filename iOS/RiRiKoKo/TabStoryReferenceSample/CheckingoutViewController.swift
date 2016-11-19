@@ -18,8 +18,8 @@ import UIKit
 class CheckingoutViewController: UITableViewController {
     
     var itemImageTemp:UIImage!
-    
     var itemTitleTemp:String!
+    var itemPriceTemp:Int!
 
     @IBOutlet weak var buyButton: UIButton!
     
@@ -41,6 +41,7 @@ class CheckingoutViewController: UITableViewController {
 
         itemTitle.text = itemTitleTemp
         itemImage.image = itemImageTemp
+        itemPrice.text = "NTD \(itemPriceTemp)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,8 +52,13 @@ class CheckingoutViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-            let Destination : ChechoutStatusViewController = segue.destinationViewController as! ChechoutStatusViewController
-            //Destination.patchItemTitle = itemTitle
+        let Destination : ChechoutStatusViewController = segue.destinationViewController as! ChechoutStatusViewController
+        Destination.itemTitleTemp = itemTitleTemp
+        Destination.itemImageTemp = itemImageTemp
+        
+        
+        
+        
     
     }
 
