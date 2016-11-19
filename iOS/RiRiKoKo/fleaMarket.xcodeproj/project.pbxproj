@@ -70,6 +70,7 @@
 		C980587A1CFE8ECA00F8F629 /* itemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98058791CFE8ECA00F8F629 /* itemDetailViewController.swift */; };
 		C9AD975B1CFA7E2D00672234 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD975A1CFA7E2D00672234 /* CollectionViewCell.swift */; };
 		C9AD975D1CFAA1E600672234 /* FirstTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD975C1CFAA1E600672234 /* FirstTabViewController.swift */; };
+		C9D73E4E1DE0428000023490 /* ChechoutStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D73E4D1DE0428000023490 /* ChechoutStatusViewController.swift */; };
 		C9E40DCD1DDEF64C00FE1399 /* Checkingout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9E40DCC1DDEF64C00FE1399 /* Checkingout.storyboard */; };
 		C9E40DCF1DDEF67800FE1399 /* CheckingoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E40DCE1DDEF67800FE1399 /* CheckingoutViewController.swift */; };
 		C9E9E2D41D3BD89400FB0312 /* Dictionaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E9E2D31D3BD89400FB0312 /* Dictionaries.swift */; };
@@ -179,6 +180,7 @@
 		C98058791CFE8ECA00F8F629 /* itemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = itemDetailViewController.swift; sourceTree = "<group>"; };
 		C9AD975A1CFA7E2D00672234 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		C9AD975C1CFAA1E600672234 /* FirstTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTabViewController.swift; sourceTree = "<group>"; };
+		C9D73E4D1DE0428000023490 /* ChechoutStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChechoutStatusViewController.swift; sourceTree = "<group>"; };
 		C9E40DCC1DDEF64C00FE1399 /* Checkingout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkingout.storyboard; sourceTree = "<group>"; };
 		C9E40DCE1DDEF67800FE1399 /* CheckingoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckingoutViewController.swift; sourceTree = "<group>"; };
 		C9E9E2D31D3BD89400FB0312 /* Dictionaries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionaries.swift; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 				C96C12471D3B5E1C006641F2 /* ItemDetailStatusCell.swift */,
 				C9E40DCC1DDEF64C00FE1399 /* Checkingout.storyboard */,
 				C9E40DCE1DDEF67800FE1399 /* CheckingoutViewController.swift */,
+				C9D73E4D1DE0428000023490 /* ChechoutStatusViewController.swift */,
 				C9FFA38D1D181A700057E439 /* Search.storyboard */,
 				C9FFA38F1D181A7F0057E439 /* SearchViewController.swift */,
 				C9FFA3931D1E99110057E439 /* UserDetail.storyboard */,
@@ -844,6 +847,7 @@
 				7A751C3D1CF9BDBA0096BDE6 /* FirstViewController.swift in Sources */,
 				C9FFA38C1D14D14B0057E439 /* FillInAddressViewController.swift in Sources */,
 				C974EE2C1D06EE0C001002BE /* S03_SettingsTableViewController.swift in Sources */,
+				C9D73E4E1DE0428000023490 /* ChechoutStatusViewController.swift in Sources */,
 				C9E9E2D41D3BD89400FB0312 /* Dictionaries.swift in Sources */,
 				C90EEA731D2D283800711C22 /* RegisteringViewController.swift in Sources */,
 			);

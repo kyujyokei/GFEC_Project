@@ -1,59 +1,33 @@
 //
-//  CheckingoutViewController.swift
+//  ChechoutStatusViewController.swift
 //  fleaMarket
 //
-//  Created by Kero on 2016/11/18.
+//  Created by Kero on 2016/11/19.
 //  Copyright © 2016年 ColorKit. All rights reserved.
 //
 
-/*
- NOTE: The RiRiKoKo database wasn't completed to provide APIs for checking out.
- What is here is prototype UI of how the checkout process will go.
- 
- 
- */
-
 import UIKit
 
-class CheckingoutViewController: UITableViewController {
-    
-    var itemImageTemp:UIImage!
-    
-    var itemTitleTemp:String!
-
-    @IBOutlet weak var buyButton: UIButton!
+class ChechoutStatusViewController: UITableViewController {
     
     @IBOutlet weak var itemImage: UIImageView!
     
     @IBOutlet weak var itemTitle: UILabel!
     
-    @IBOutlet weak var itemPrice: UILabel!
-    
-    
-    @IBAction func buyButtonAction(sender: UIButton) {
-        
-        //self.navigationController?.popToRootViewControllerAnimated(true)
-    }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        itemTitle.text = itemTitleTemp
-        itemImage.image = itemImageTemp
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-            let Destination : ChechoutStatusViewController = segue.destinationViewController as! ChechoutStatusViewController
-            //Destination.patchItemTitle = itemTitle
-    
     }
 
     // MARK: - Table view data source

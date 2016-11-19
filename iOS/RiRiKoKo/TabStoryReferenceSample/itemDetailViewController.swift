@@ -107,6 +107,10 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
             let Destination : UserDetailViewController = segue.destinationViewController as! UserDetailViewController
             //let selectedNumber = sender as! Int
             Destination.userId = itemSellerId
+        } else if (segue.identifier == "checkOut") {
+            let Destination : CheckingoutViewController = segue.destinationViewController as! CheckingoutViewController
+            Destination.itemImageTemp = itemImage.image
+            Destination.itemTitleTemp = itemTitle
         }
     }
     
