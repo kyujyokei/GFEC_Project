@@ -21,7 +21,7 @@ class ChechoutStatusViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.setHidesBackButton(true, animated:true);
         itemTitle.text = itemTitleTemp
         itemImage.image = itemImageTemp
     }

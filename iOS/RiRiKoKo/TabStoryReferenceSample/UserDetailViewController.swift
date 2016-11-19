@@ -34,6 +34,13 @@ class UserDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
+        let bgImage = UIImageView();
+        bgImage.image = UIImage(named: "bg");
+        bgImage.contentMode = .ScaleToFill
+        
+        self.collectionView?.backgroundView = bgImage
+        self.collectionView?.backgroundView!.contentMode = UIViewContentMode.ScaleAspectFill
+        
         //決定每個cell的大小
         if traitCollection.horizontalSizeClass == .Compact && traitCollection.verticalSizeClass == .Regular {
             //如果是直的
