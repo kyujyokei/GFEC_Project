@@ -150,15 +150,19 @@ class FillInAddressViewController: UIViewController, UIPopoverPresentationContro
                     
                     let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(region.center.latitude, region.center.longitude)
 
-                    region.span = MKCoordinateSpanMake(0.1, 0.1)
+                    region.span = MKCoordinateSpanMake(0.01, 0.01)
                     
                     //self.testLat.text =  ("LAT:\(region.center.latitude)")
                     //self.testLong.text =  ("LONG:\(region.center.longitude)")
+                    
 
                     self.mapView.setRegion(region, animated: true)
                     
                     let annotation = MKPointAnnotation()
                     annotation.coordinate = location
+                    
+                    
+                    self.mapView.addAnnotation(annotation)
                     
                     self.addAddressButton.backgroundColor = UIColorUtil.rgb(0x654982)
                     self.addAddressButton.enabled = true

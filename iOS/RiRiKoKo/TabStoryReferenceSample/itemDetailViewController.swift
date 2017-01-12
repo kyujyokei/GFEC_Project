@@ -164,6 +164,11 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
         let purple = UIColorUtil.rgb(0x654982)
         contactButton.layer.borderColor = purple.CGColor
         
+        seeUserButton.layer.cornerRadius = 30/2
+        seeUserButton.backgroundColor = UIColor.clearColor()
+        seeUserButton.layer.borderWidth = 1
+        seeUserButton.layer.borderColor = purple.CGColor
+        
         
         //getSpecificUser()
         
@@ -395,7 +400,7 @@ class itemDetailViewController: UIViewController, MKMapViewDelegate, CLLocationM
                     region.center.latitude = latitude
                     region.center.longitude = longtitude
                     
-                    let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(region.center.latitude, region.center.longitude)
+                    //let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(region.center.latitude, region.center.longitude)
                     
                     region.span = MKCoordinateSpanMake(0.01, 0.01)
                     

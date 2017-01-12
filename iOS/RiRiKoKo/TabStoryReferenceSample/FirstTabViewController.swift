@@ -30,6 +30,11 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
     
     @IBOutlet weak var categoryScroll: UIScrollView!
     
+    
+    @IBAction func allCategoriesButtonAction(sender: UIButton) {
+        getDataFromDB()
+    }
+    
     @IBAction func womenClothingButton(sender: UIButton) {
         
         getDataByCategory(1)
@@ -261,15 +266,14 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
     
     private func getDataByCategory(categoryId:Int) {
         
+        //http://ririkoko.herokuapp.com/api/merchandises?category_id=1&api_key=e813852b6d35e706f776c74434b001f9
         
         let methodParameters: [String: String!] = [
-            Constants.Categories.Id : String(categoryId),
+            Constants.Categories.Category_id : String(categoryId),
             Constants.ParameterKeys.API_Key: Constants.ParameterValues.API_Key
             ]
         
-        //print(methodParameters)
-        
-        let urlString = Constants.Categories.APIBaseURL + escapedParameters(methodParameters)
+        let urlString = Constants.Merchandises.APIBaseURL + escapedParameters(methodParameters)
         
         print("URL:\(urlString)")
         
@@ -299,8 +303,8 @@ class FirstTabViewController: UIViewController, UICollectionViewDelegate,  UICol
                     
                     
                     
-                    let itemDictionary = parsedResult!["categories"] as? [[String:AnyObject]]
-                    print(itemDictionary!.count)
+                    let itemDictionary = parsedResult!["merchandises"] as? [[String:AnyObject]]
+                    print(itemDictionary!)
                     
                     titleArray = []
                     priceArray = []

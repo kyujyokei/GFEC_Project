@@ -109,9 +109,15 @@
                                                     <constraint firstAttribute="height" constant="100" id="nac-8p-10s"/>
                                                 </constraints>
                                             </mapView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfi-dL-6UF">
-                                                <rect key="frame" x="19" y="119" width="335" height="100"/>
-                                                <state key="normal" title="See More        "/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfi-dL-6UF">
+                                                <rect key="frame" x="138" y="164" width="90" height="30"/>
+                                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="9gf-6P-hbF"/>
+                                                </constraints>
+                                                <state key="normal" title="See More">
+                                                    <color key="titleColor" red="0.39607843139999999" green="0.28627450980000002" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="seeUserButtonAction:" destination="1LD-cq-aO6" eventType="touchUpInside" id="gfq-ar-Cs9"/>
                                                 </connections>
@@ -122,6 +128,7 @@
                                             <constraint firstItem="fgm-gm-fwD" firstAttribute="leading" secondItem="zKq-d6-3PQ" secondAttribute="leading" id="1ZP-24-m5R"/>
                                             <constraint firstAttribute="height" constant="265" id="EnW-WK-L8c"/>
                                             <constraint firstItem="Gfi-dL-6UF" firstAttribute="leading" secondItem="6XI-kl-jhW" secondAttribute="trailing" id="Exd-np-pvQ"/>
+                                            <constraint firstItem="Gfi-dL-6UF" firstAttribute="centerY" secondItem="6XI-kl-jhW" secondAttribute="centerY" constant="10" id="KqZ-Zh-Yka"/>
                                             <constraint firstAttribute="trailing" secondItem="Gfi-dL-6UF" secondAttribute="trailing" constant="19" id="OYN-Qy-9MP"/>
                                             <constraint firstItem="yMx-un-vd9" firstAttribute="top" secondItem="fgm-gm-fwD" secondAttribute="bottom" constant="19" id="Ske-fM-Una"/>
                                             <constraint firstItem="Gfi-dL-6UF" firstAttribute="top" secondItem="fgm-gm-fwD" secondAttribute="bottom" constant="19" id="WOQ-BG-YaF"/>
@@ -131,11 +138,16 @@
                                             <constraint firstItem="6XI-kl-jhW" firstAttribute="leading" secondItem="zKq-d6-3PQ" secondAttribute="leading" constant="19" id="eWx-J1-HNy"/>
                                             <constraint firstItem="Gfi-dL-6UF" firstAttribute="height" secondItem="6XI-kl-jhW" secondAttribute="height" id="iCV-1G-sSN"/>
                                             <constraint firstItem="fgm-gm-fwD" firstAttribute="top" secondItem="zKq-d6-3PQ" secondAttribute="top" id="oDe-it-Z4W"/>
+                                            <constraint firstItem="Gfi-dL-6UF" firstAttribute="leading" secondItem="yMx-un-vd9" secondAttribute="leading" id="uus-TM-Pv8"/>
                                             <constraint firstItem="6XI-kl-jhW" firstAttribute="top" secondItem="fgm-gm-fwD" secondAttribute="bottom" constant="19" id="ycm-pp-T1M"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="Exd-np-pvQ"/>
+                                                <exclude reference="OYN-Qy-9MP"/>
+                                                <exclude reference="WOQ-BG-YaF"/>
+                                                <exclude reference="bHJ-WH-2ka"/>
+                                                <exclude reference="iCV-1G-sSN"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -161,7 +173,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOr-pI-HfZ">
-                                                            <rect key="frame" x="8" y="0.0" width="69.5" height="35"/>
+                                                            <rect key="frame" x="8" y="0.0" width="70" height="35"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -235,7 +247,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kpi-7D-AmV">
-                                                <rect key="frame" x="197" y="20" width="157.5" height="40"/>
+                                                <rect key="frame" x="197" y="20" width="158" height="40"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="VBa-71-NsY"/>

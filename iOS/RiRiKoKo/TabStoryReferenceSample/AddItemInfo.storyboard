@@ -10,7 +10,7 @@
         <scene sceneID="bvO-Jk-3qH">
             <objects>
                 <tableViewController storyboardIdentifier="AddItemInfoTableViewController" id="znx-RW-K34" customClass="AddItemInfoTableViewController" customModule="RiRiKoKo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="Snu-Ni-DxS">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="Snu-Ni-DxS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

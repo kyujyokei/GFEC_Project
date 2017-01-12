@@ -91,6 +91,13 @@ class FifthTabViewController: UIViewController , MKMapViewDelegate, CLLocationMa
         self.navigationItem.titleView = titleView
         navigationController!.navigationBar.barTintColor = UIColorUtil.rgb(0xffffff);
         // End of adding logo to Navigation Bar
+        
+        let purple = UIColorUtil.rgb(0x654982)
+        logoutButton.layer.cornerRadius = 30/2
+        logoutButton.backgroundColor = UIColor.clearColor()
+        logoutButton.layer.borderWidth = 1
+        logoutButton.layer.borderColor = purple.CGColor
+        
     }
 
     override func didReceiveMemoryWarning() {

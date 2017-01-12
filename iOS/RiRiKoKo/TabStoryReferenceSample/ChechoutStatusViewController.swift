@@ -18,12 +18,51 @@ class ChechoutStatusViewController: UITableViewController {
     
     @IBOutlet weak var itemTitle: UILabel!
     
+    @IBOutlet weak var whatYouBoughtLabel: UILabel!
+    
+    @IBOutlet weak var itemPriceLabel: UILabel!
+
+    @IBOutlet weak var orderTimeLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
+        
+        let date = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale.currentLocale()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm "
+        let convertedDate = dateFormatter.stringFromDate(date)
+
+        //let calendar = NSCalendar.currentCalendar()
+        
+        
         self.navigationItem.setHidesBackButton(true, animated:true);
         itemTitle.text = itemTitleTemp
         itemImage.image = itemImageTemp
+        orderTimeLabel.text = convertedDate
+        itemPriceLabel.text = String(itemPriceTemp!)
+        
+        whatYouBoughtLabel.text = "You bought the \(itemTitleTemp)!"
+        
+        
+        // Beggining of adding logo to Navigation Bar
+        var titleView : UIImageView
+        titleView = UIImageView(frame:CGRectMake(0, 0, 30, 45))
+        titleView.contentMode = .ScaleAspectFit
+        titleView.image = UIImage(named: "logo.png")
+        self.navigationItem.titleView = titleView
+        navigationController!.navigationBar.barTintColor = UIColorUtil.rgb(0xffffff);
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
+        addButton.tintColor = UIColor.clearColor()
+        navigationItem.rightBarButtonItem = addButton
+        navigationItem.leftBarButtonItem = addButton
+        // End of adding logo to Navigation Bar
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

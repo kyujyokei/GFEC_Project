@@ -29,6 +29,7 @@ struct Constants {
     struct Categories {
         static let APIBaseURL = "http://ririkoko.herokuapp.com/api/categories"
         static let Id = "id"
+        static let Category_id = "category_id"
     }
     
     // MARK: Merchandises Parameter Keys

@@ -43,9 +43,7 @@ class AreaTable: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
-       // var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
-        
-        //        controller.chooseCityButton.setTitle("Hi" , forState: .Normal)
+
         selectedAreaNumber = indexPath.row
         
         navigationController?.popViewControllerAnimated(false)

@@ -32,6 +32,6 @@ If you're using Cloud9 IDE, follow steps below to start your workspace, and make
  9. Resolve conflicts if any util your changes can be successfully merged into master.
 
 ##Contributors
-[Caroline Xie](https://github.com/kyujyokei) /
+[Kejo Hsieh](https://github.com/kyujyokei) /
 [Elsa Lau](https://github.com/absoluteyl) /
 [Fergus Ke](https://github.com/KeJingTai) 

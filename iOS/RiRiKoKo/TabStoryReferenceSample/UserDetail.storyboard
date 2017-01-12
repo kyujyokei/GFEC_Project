@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--User Detail View Controller-->
@@ -18,21 +19,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBe-LZ-3hq">
-                                <rect key="frame" x="20" y="20" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5B-TD-9By">
+                                <rect key="frame" x="20" y="0.0" width="560" height="240"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBe-LZ-3hq">
+                                        <rect key="frame" x="8" y="70" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="CRS-5B-Acf"/>
+                                            <constraint firstAttribute="width" constant="100" id="aeM-yD-OHg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi1-dU-shp">
+                                        <rect key="frame" x="144" y="105" width="61" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="CRS-5B-Acf"/>
-                                    <constraint firstAttribute="width" constant="100" id="aeM-yD-OHg"/>
+                                    <constraint firstItem="uBe-LZ-3hq" firstAttribute="centerY" secondItem="o5B-TD-9By" secondAttribute="centerY" id="Gvf-LI-F2F"/>
+                                    <constraint firstItem="Oi1-dU-shp" firstAttribute="leading" secondItem="uBe-LZ-3hq" secondAttribute="trailing" constant="36" id="IqY-Or-afU"/>
+                                    <constraint firstItem="Oi1-dU-shp" firstAttribute="centerY" secondItem="o5B-TD-9By" secondAttribute="centerY" id="XDr-KV-fIU"/>
+                                    <constraint firstItem="uBe-LZ-3hq" firstAttribute="leading" secondItem="o5B-TD-9By" secondAttribute="leading" constant="8" id="rte-hs-laK"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oi1-dU-shp">
-                                <rect key="frame" x="147" y="55" width="61" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7n2-Fo-qjJ">
-                                <rect key="frame" x="0.0" y="134" width="600" height="466"/>
+                                <rect key="frame" x="0.0" y="179" width="600" height="421"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="466" id="dNt-gl-tEU"/>
                                 </constraints>
@@ -90,6 +102,11 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dNt-gl-tEU"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="f93-cu-Sza" id="KZr-5i-oVf"/>
                                     <outlet property="delegate" destination="f93-cu-Sza" id="c9j-sR-JE0"/>
@@ -99,21 +116,14 @@
                         <color key="backgroundColor" red="0.39607843139999999" green="0.28627450980000002" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7n2-Fo-qjJ" firstAttribute="leading" secondItem="hKW-if-tnh" secondAttribute="leading" id="35E-bg-6Sp"/>
-                            <constraint firstItem="Oi1-dU-shp" firstAttribute="centerY" secondItem="uBe-LZ-3hq" secondAttribute="centerY" id="4n2-sg-Tzi"/>
-                            <constraint firstItem="Oi1-dU-shp" firstAttribute="top" secondItem="8BX-SI-6Zj" secondAttribute="bottom" id="CEq-Kd-23O"/>
+                            <constraint firstItem="o5B-TD-9By" firstAttribute="leading" secondItem="hKW-if-tnh" secondAttribute="leadingMargin" id="6tY-dc-bWY"/>
                             <constraint firstItem="7n2-Fo-qjJ" firstAttribute="bottom" secondItem="OvJ-WR-aGD" secondAttribute="top" id="FCl-SP-4Ts"/>
-                            <constraint firstItem="Oi1-dU-shp" firstAttribute="leading" secondItem="uBe-LZ-3hq" secondAttribute="trailing" constant="27" id="N4k-0E-RSe"/>
-                            <constraint firstItem="uBe-LZ-3hq" firstAttribute="top" secondItem="Oi1-dU-shp" secondAttribute="top" id="XH9-IM-mtD"/>
+                            <constraint firstItem="7n2-Fo-qjJ" firstAttribute="height" secondItem="hKW-if-tnh" secondAttribute="height" multiplier="0.7" constant="1" id="GKy-l5-Dim"/>
+                            <constraint firstItem="o5B-TD-9By" firstAttribute="top" secondItem="hKW-if-tnh" secondAttribute="topMargin" id="aTc-Cd-JyK"/>
                             <constraint firstAttribute="trailing" secondItem="7n2-Fo-qjJ" secondAttribute="trailing" id="l8l-QS-TRU"/>
-                            <constraint firstItem="7n2-Fo-qjJ" firstAttribute="top" secondItem="uBe-LZ-3hq" secondAttribute="bottom" constant="14" id="mkq-VJ-gPD"/>
-                            <constraint firstItem="uBe-LZ-3hq" firstAttribute="leading" secondItem="hKW-if-tnh" secondAttribute="leadingMargin" id="uUJ-Cj-8gh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o5B-TD-9By" secondAttribute="trailing" id="lUc-jF-5mU"/>
+                            <constraint firstItem="o5B-TD-9By" firstAttribute="height" secondItem="hKW-if-tnh" secondAttribute="height" multiplier="0.4" id="nRG-eb-Hyh"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="XH9-IM-mtD"/>
-                                <exclude reference="CEq-Kd-23O"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="7n2-Fo-qjJ" id="ImH-r0-gYm"/>

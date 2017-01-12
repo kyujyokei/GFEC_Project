@@ -58,10 +58,28 @@ class CheckingoutViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView()
 
         itemTitle.text = itemTitleTemp
         itemImage.image = itemImageTemp
         itemPrice.text = "NTD \(itemPriceTemp)"
+        
+        
+        // Beggining of adding logo to Navigation Bar
+        var titleView : UIImageView
+        titleView = UIImageView(frame:CGRectMake(0, 0, 30, 45))
+        titleView.contentMode = .ScaleAspectFit
+        titleView.image = UIImage(named: "logo.png")
+        self.navigationItem.titleView = titleView
+        navigationController!.navigationBar.barTintColor = UIColorUtil.rgb(0xffffff);
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: nil)
+        addButton.tintColor = UIColor.clearColor()
+        navigationItem.rightBarButtonItem = addButton
+        // End of adding logo to Navigation Bar
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,7 +93,7 @@ class CheckingoutViewController: UITableViewController {
         let Destination : ChechoutStatusViewController = segue.destinationViewController as! ChechoutStatusViewController
         Destination.itemTitleTemp = itemTitleTemp
         Destination.itemImageTemp = itemImageTemp
-        
+        Destination.itemPriceTemp = itemPriceTemp
         
         
         

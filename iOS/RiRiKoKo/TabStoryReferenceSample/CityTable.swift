@@ -38,9 +38,7 @@ class CityTable: UITableViewController {
         //print(theDelegate.cityTemp)
         
         let storyboard = UIStoryboard(name: "FillInAddress", bundle: nil)
-        //var controller = storyboard.instantiateViewControllerWithIdentifier("FillInAddressViewController") as! FillInAddressViewController
 
-//        controller.chooseCityButton.setTitle("Hi" , forState: .Normal)
         selectedNumber = theDelegate.cityTemp
         
         navigationController?.popViewControllerAnimated(false)
