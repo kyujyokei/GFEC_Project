@@ -1,6 +1,7 @@
+![alt tag](http://imgur.com/6TLPNb2.png)
+
 ##Demo Video
 https://youtu.be/qMmcuF47tsw
-![alt tag](http://imgur.com/6TLPNb2)
 
 ##Introduction
   This is the final project for III GFEC01, our goal is to provide a flea market platform which allows users to easily, quickly sell/buy stuff, food, or share/join activities and support both iOS app and websites.
